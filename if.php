@@ -55,7 +55,8 @@ elseif ($b != $c)
     // output the appropriate result
     echo "$b is not equal to $c\n";
 } 
-elseif ($b !== $c) {
+elseif ($b !== $c) 
+{
     // output the appropriate result
     echo "$b is not identical to $c\n";
 } 
