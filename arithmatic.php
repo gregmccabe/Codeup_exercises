@@ -37,7 +37,7 @@ function divide($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) {
 		if ($b == 0) {
-			echo "ERROR: can't divide by 0 yo!!\n";
+			echo "FALSE\n";
 		} else {
 			return $a / $b . PHP_EOL;
 		}
@@ -45,7 +45,7 @@ function divide($a, $b)
 		error();
 	}
 }
-echo divide(12,2);
+echo divide(12,0);
 
 function modulus($a, $b)
 {
