@@ -7,10 +7,10 @@ function add($a, $b)
 	{
 		echo $a + $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		error();
 	}
 }
-add(10,10);
+add('10',10);
 
 function subtract($a, $b) 
 {
@@ -18,7 +18,7 @@ function subtract($a, $b)
 	{
 		echo $a - $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		error();
 	}
 }
 subtract(75,42);
@@ -26,9 +26,9 @@ subtract(75,42);
 function multiply($a, $b) 
 {
 	if (is_numeric($a) && is_numeric($b)) {
-    	echo $a * $b . PHP_EOL;
+		echo $a * $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		error();
 	}
 }
 multiply(30,3);
@@ -39,24 +39,27 @@ function divide($a, $b)
 		if ($b == 0) {
 			echo "ERROR: can't divide by 0 yo!!\n";
 		} else {
-            echo $a / $b . PHP_EOL;
-        }
+			echo $a / $b . PHP_EOL;
+		}
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		error();
 	}
 }
-divide(12,0);
+divide(12,2);
 
 function modulus($a, $b)
 {
 	if (is_numeric($a) && is_numeric($b)) 	
 	{
-	echo $a % $b . PHP_EOL;
+		echo $a % $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both arguments must be numbers\n";
+		error();
 	}
 }
 modulus(23,4);
-
+function error()
+{
+	echo "ERROR: Both arguments must be numbers\n";
+}
 ?>
 
