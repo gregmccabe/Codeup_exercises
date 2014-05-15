@@ -10,7 +10,7 @@ function add($a, $b)
 		echo "ERROR: Both arguments must be numbers\n";
 	}
 }
-add(10,'greg');
+add(10,10);
 
 function subtract($a, $b) 
 {
@@ -21,29 +21,31 @@ function subtract($a, $b)
 		echo "ERROR: Both arguments must be numbers\n";
 	}
 }
-subtract('run', 42);
+subtract(75,42);
 
 function multiply($a, $b) 
 {
-	if (is_numeric($a) && is_numeric($b))
-	{
-    echo $a * $b . PHP_EOL;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a * $b . PHP_EOL;
 	} else {
 		echo "ERROR: Both arguments must be numbers\n";
 	}
 }
-multiply(30,TRUE);
+multiply(30,3);
 
 function divide($a, $b) 
 {
-	if (is_numeric($a) && is_numeric($b))
-    {
-    echo $a / $b . PHP_EOL;
+	if (is_numeric($a) && is_numeric($b)) {
+		if ($b == 0) {
+			echo "ERROR: can't divide by 0 yo!!\n";
+		} else {
+            echo $a / $b . PHP_EOL;
+        }
 	} else {
 		echo "ERROR: Both arguments must be numbers\n";
 	}
 }
-divide(FALSE, FALSE);
+divide(12,0);
 
 function modulus($a, $b)
 {
@@ -54,7 +56,7 @@ function modulus($a, $b)
 		echo "ERROR: Both arguments must be numbers\n";
 	}
 }
-modulus(23,'echo');
+modulus(23,4);
 
 ?>
 
