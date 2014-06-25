@@ -10,6 +10,7 @@ echo $dbc->getAttribute(PDO::ATTR_CONNECTION_STATUS) . "\n";
 $query = 'CREATE TABLE name (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(20) NOT NULL,
+    phone VARCHAR(15),
     PRIMARY KEY (id)
 )';
 $dbc->exec($query);
@@ -20,7 +21,6 @@ $query = 'CREATE TABLE address (
     city VARCHAR(50) NOT NULL,
     state VARCHAR(20) NOT NULL,
     zip VARCHAR(5) NOT NULL,
-    phone VARCHAR(15),
     PRIMARY KEY (id)
 )';
 $dbc->exec($query);
